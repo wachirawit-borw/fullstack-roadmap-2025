@@ -1,0 +1,99 @@
+/* styles.css */
+
+body {
+    font-family: sans-serif;
+    margin: 0;
+    background-color: #f9f9f9;
+    color: #222;
+  }
+  
+  header {
+    background-color: #00744e;
+    color: white;
+    padding: 2rem;
+    border-radius: 0 0 1rem 1rem;
+    text-align: center;
+  }
+  
+  header h1 {
+    margin: 0 0 0.5rem;
+  }
+  
+  nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  main {
+    padding: 2rem;
+    max-width: 800px;
+    margin: auto;
+  }
+  
+  section {
+    background-color: white;
+    padding: 1.5rem;
+    margin-bottom: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  }
+  
+  article {
+    margin-bottom: 2rem;
+  }
+  
+  article img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 0.5rem;
+    margin: 1rem 0;
+  }
+  
+  form {
+    display: grid;
+    gap: 1rem;
+    max-width: 500px;
+  }
+  
+  input, textarea {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    width: 100%;
+  }
+  
+  button {
+    background-color: #00744e;
+    color: white;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #005f3e;
+  }
+  
+  footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #555;
+    padding: 1rem;
+  }
+  
