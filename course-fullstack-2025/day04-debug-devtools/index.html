@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Test page for DevTools And Accessibility">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DevTools Debug & Accessibility Demo</title>
+    <style>
+        body {
+        font-family: Arial, san-serif;
+        padding: 2rem;
+        }
+        .btn {
+            padding: 10px 20px;
+            background-color: #1976d2;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        img{
+            min-width: 200px;
+            display: block;
+            margin-bottom: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <h>welcome to DevTools Practice Page</h>
+    <p>This page is for testing <stong>Chrome DevTools</stong>, <em>Acessibility</em>, and <u>Lighthouse</u></p>
+    <h2>Accessible Image</h2>
+    <img src="https://via.placeholder.com/200x100.png?text=Alt+Test" alt="Placeholder image for accessibilty testing">
+    <h2>Accessible Button</h2>
+    <button class="btn" arial-label="Click to subscribe to newsletter">Subscribe</button>
+    <h2>Landmark Navigation</h2>
+    <nav role="navigation" aria-label="Main menu">
+        <ul>
+            <li><a href="#home">home</a></li>
+            <li><a href="#about">about</a></li>
+        </ul>
+    </nav>
+    <h2>Form with ARIA</h2>
+    <form aria-labelledby="signup-form">
+        <h3 id="signup-form">signup form</h3>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" aria-required="true" />
+    </form>
+    <footer role="contentinfo">
+        <p>&copy; 2025 DevTools Demo. All rights reserved.</p>
+    </footer>
+</body>
+</html>
