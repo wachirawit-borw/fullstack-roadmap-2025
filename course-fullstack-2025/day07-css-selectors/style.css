@@ -1,0 +1,53 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: sans-serif;
+    padding: 20px;
+    background: #f0f0f0;
+}
+h1 {
+    color: darkblue;
+}
+p {
+    color: #333;
+}
+.highlight {
+    color: red;
+    font-weight: bold;
+}
+#main-title {
+    font-size: 2rem;
+    text-decoration: underline;
+}
+h1, h2 {
+    margin-bottom: 10px;
+}
+div > p {
+    background: #d0f0ff;
+    padding: 5px;
+}
+ul.menu li {
+    list-style: square;
+    padding-left: 10px;
+}
+.menu > li.highlight {
+    background-color: yellow;
+}
+a[title] {
+    color: green;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+li:nth-child(odd) {
+    background: #eee;
+}
+p::before {
+    content: "💡 ";
+}
+p::after {
+    content: " 📘";
+}
