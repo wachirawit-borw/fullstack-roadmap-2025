@@ -123,12 +123,11 @@
 
 ```
 {{REPO_ROOT}}/course-fullstack-2025/day{{DAY}}-{{SLUG}}/
-├─ README.md               # แม่แบบ (ไฟล์นี้)
 ├─ 00-playground/
 ├─ 01-patterns/
 ├─ 02-project/
 ├─ 03-homework/
-└─ notes.md                # บันทึกส่วนตัว
+└─ README.md               # แม่แบบ (ไฟล์นี้)
 ```
 
 ---
