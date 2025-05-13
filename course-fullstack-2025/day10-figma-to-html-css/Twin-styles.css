@@ -1,0 +1,44 @@
+.hero {
+  background-image: url("preview.jpg");  /* ✅ ใช้ภาพเป็นพื้นหลัง */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+  color: white; /* ✅ อ่านง่ายบนพื้นภาพ */
+  padding: 2rem;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.3); /* ✅ ม่านดำจาง เพิ่ม contrast */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 600px;
+}
+
+.btn-primary {
+  padding: 0.5rem 1rem;
+  border: 2px solid #0066ff;
+  background-color: transparent;
+  color: #0066ff;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 1rem;
+  line-height: 1;
+  transition: all 0.3s ease; /* สำคัญ */
+}
+
+.btn-primary:hover {
+  background-color: #f0f0f0;
+}
