@@ -46,6 +46,7 @@
 ## 💻 Code ตัวอย่าง (ที่ทดลองแล้ว)
 
 ### 🌗 CSS Variables ใช้สร้างระบบ Theme
+
 ```css
 :root {
   --bg-color: white;
@@ -59,12 +60,13 @@ body {
   background: var(--bg-color);
   color: var(--text-color);
 }
-
----
-
+```
 ### 🌗 ป้องกัน XSS ด้วย Content-Security-Policy
+```css
 <meta http-equiv="Content-Security-Policy"
       content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net;">
 
 <!-- inline script ด้านล่างจะถูก block โดย CSP -->
 <script>alert("This alert should be blocked by CSP!");</script>
+
+```
