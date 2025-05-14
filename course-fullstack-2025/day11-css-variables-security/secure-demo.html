@@ -1,0 +1,41 @@
+<!-- secure-demo.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Secure Demo</title>
+
+  <!-- 🔒 Content-Security-Policy: ป้องกันการโหลด script แปลกปลอม -->
+  <meta http-equiv="Content-Security-Policy"
+        content="default-src 'self'; script-src 'self' https://cdn.jsdelivr.net;">
+  
+  <!-- ✅ script จาก CDN ที่อนุญาต -->
+  <script src="https://cdn.jsdelivr.net/npm/dayjs@1/dayjs.min.js"></script>
+  
+  <style>
+    body {
+      background: #f4f4f4;
+      font-family: sans-serif;
+      padding: 2rem;
+    }
+    .card {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <h1>Secure by CSP</h1>
+    <p>Try to run <code>alert()</code> inline below – browser should block it.</p>
+  </div>
+
+  <!-- ❌ โค้ดอันตราย: CSP จะ block -->
+  <script>
+    alert("This alert should be blocked by CSP!");
+  </script>
+</body>
+</html>
