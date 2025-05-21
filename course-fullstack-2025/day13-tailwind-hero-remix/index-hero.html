@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="th">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hero Fullscreen Background</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="m-0 p-0">
+    <!-- ✅ Hero แบบเต็มจอ มีพื้นหลัง + overlay -->
+    <section
+      class="relative h-screen bg-cover bg-center"
+      style="
+        background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=1600&q=80');
+      "
+    >
+      <!-- 🔹 overlay ดำโปร่ง -->
+      <div class="absolute inset-0 bg-black opacity-50"></div>
+
+      <!-- 🔹 ข้อความตรงกลางจอ -->
+      <div
+        class="relative z-10 flex items-center justify-center h-full text-center px-4"
+      >
+        <div class="text-white max-w-2xl">
+          <h1 class="text-4xl md:text-5xl font-bold mb-6 drop-shadow-lg">
+            ธรรมชาติคือพลังแห่งแรงบันดาลใจ
+          </h1>
+          <p class="text-lg mb-8 drop-shadow">
+            เรียนรู้ Tailwind CSS อย่างมีสไตล์
+            สร้างเว็บไซต์ที่สวยงามด้วยพื้นฐานที่แข็งแรง
+          </p>
+          <a
+            href="#"
+            class="inline-block px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded transition"
+          >
+            เริ่มต้นใช้งาน
+          </a>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
