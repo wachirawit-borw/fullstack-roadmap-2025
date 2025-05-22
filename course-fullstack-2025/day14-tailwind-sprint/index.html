@@ -1,0 +1,50 @@
+<!DOCTYPE html><html lang="th"><head>
+<meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Day14 – Tailwind Component Kit (One-File)</title>
+
+<!-- โหลด Tailwind + JIT -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {
+  darkMode:'class',
+  theme:{extend:{colors:{brand:'#1E40AF'}}}
+}
+</script>
+
+<!-- @apply ได้จริงเพราะ type="text/tailwindcss" -->
+<style type="text/tailwindcss">
+@layer components{
+  .btn  {@apply px-4 py-2 rounded-lg bg-brand text-white hover:bg-blue-700 transition;}
+  .card {@apply p-6 bg-white dark:bg-gray-800 rounded-lg shadow-md;}
+}
+</style>
+</head><body class="bg-gray-100 dark:bg-gray-900 dark:text-white font-sans">
+
+<nav class="bg-brand text-white px-6 py-4 flex justify-between">
+  <span class="font-bold">MyApp</span>
+  <button id="theme" class="btn text-sm px-3 py-1">🌓</button>
+</nav>
+
+<main class="max-w-2xl mx-auto p-6 space-y-10">
+  <section class="text-center space-y-4">
+    <h2 class="text-2xl font-bold">Button Demo</h2>
+    <button class="btn">กดฉัน</button>
+  </section>
+
+  <section class="card">
+    <h2 class="text-xl font-bold mb-2">การ์ดตัวอย่าง</h2>
+    <p class="text-gray-700 dark:text-gray-300">การ์ดนี้สร้างด้วย <code>@apply</code></p>
+  </section>
+
+  <section>
+    <h2 class="text-2xl font-bold mb-4">Form Demo</h2>
+    <input class="block w-full rounded border-gray-300 px-3 py-2 focus:ring-brand focus:border-brand"
+           placeholder="you@example.com"/>
+  </section>
+</main>
+
+<script>
+document.getElementById('theme')
+        .addEventListener('click',()=>document.documentElement.classList.toggle('dark'));
+</script>
+</body></html>
