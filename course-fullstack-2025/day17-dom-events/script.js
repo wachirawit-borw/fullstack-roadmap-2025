@@ -1,20 +1,23 @@
-const button = document.getElementById("clickMe");
-const nameInput = document.getElementById("nameInput");
-const greeting = document.getElementById("greeting");
+const panel = document.getElementById('buttonPanel');
+const nameInput = document.getElementById('nameInput');
+const greeting = document.getElementById('greeting');
 
-button.addEventListener("click", () => {
-  const name = nameInput.value;
-  greeting.innerText = `Hello, ${name || "stranger"}!`;
-});
+panel.addEventListener('click', (event) => {
+  if (!event.target.matches('.action')) return;
 
-const resetBtn = document.getElementById("resetBtn");
+  const action = event.target.innerText.toLowerCase();
+  const name = nameInput.value.trim() || 'stranger';
 
-resetBtn.addEventListener("click", () => {
-  nameInput.value = "";
-  greeting.innerText = "";
-});
+  if (action === 'greet') {
+    greeting.innerText = `Hello, ${name}!`;
+  }
 
-nameInput.addEventListener('input', () => {
-  const name = nameInput.value.trim();
-  greeting.innerText = name ? `Hello, ${name}!` : '';
+  if (action === 'clear') {
+    greeting.innerText = '';
+    nameInput.value = '';
+  }
+
+  if (action === 'surprise') {
+    greeting.innerText = `🎉 Surprise, ${name}! 🎉`;
+  }
 });
