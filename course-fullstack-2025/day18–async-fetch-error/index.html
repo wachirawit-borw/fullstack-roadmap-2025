@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <title>Async-fetch-error</title>
+  </head>
+  <body>
+    <h2>รายชื่อผู้ใช้</h2>
+    <p id="status">ยังไม่ได้โหลด</p>
+    <ul id="user-list"></ul>
+
+    <!-- ปุ่มโหลด และปุ่ม Retry -->
+    <button onclick="loadUsers()">โหลดข้อมูล</button>
+    <button id="retry-btn" onclick="loadUsers()" style="display: none">
+      ลองอีกครั้ง
+    </button>
+  </body>
+</html>
