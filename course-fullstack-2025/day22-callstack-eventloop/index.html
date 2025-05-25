@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="script.js" defer></script>
+    <title>Call Stack & Event Loop Demo</title>
+    <style>
+      body {
+        font-family: sans-serif;
+        padding: 20px;
+      }
+      .user-list {
+        display: grid;
+        gap: 1rem;
+      }
+      .skeleton,
+      .user-card {
+        background: #f0f0f0;
+        border-radius: 8px;
+        padding: 1rem;
+      }
+      .skeleton {
+        height: 80px;
+        animation: pulse 1s infinite;
+      }
+      @keyframes pulse {
+        0% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+        100% {
+          opacity: 0.6;
+        }
+      }
+      img {
+        max-width: 50px;
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>ผู้ใช้ล่าสุด</h1>
+    <ul id="user-list" class="user-list"></ul>
+  </body>
+</html>
