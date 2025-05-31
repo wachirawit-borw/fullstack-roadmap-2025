@@ -1,0 +1,18 @@
+/* App.css */
+
+body {
+  margin: 0;
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.app {
+  padding: 20px;
+}
+
+.header {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #e50914;
+}
